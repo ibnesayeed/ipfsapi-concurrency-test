@@ -34,7 +34,7 @@ def load_into_ipfs():
         digests.append(IPFSAPI.add_bytes(bytearray(data[idx], "utf-8")))
         end = time.time() - BEGINTIME
         elapsed = end - start
-        print("{}\t{:.10f}\t{:.10f}\t{:.10f}".format(idx, start, end, elapsed))
+        print("{: <5}  {:.10f}  {:.10f}  {:.10f}".format(idx, start, end, elapsed))
 
 
 def load_from_ipfs(idx):
@@ -42,7 +42,7 @@ def load_from_ipfs(idx):
     results[idx] = IPFSAPI.cat(digests[idx])
     end = time.time() - BEGINTIME
     elapsed = end - start
-    print("{}\t{:.10f}\t{:.10f}\t{:.10f}".format(idx, start, end, elapsed))
+    print("{: <5}  {:.10f}  {:.10f}  {:.10f}".format(idx, start, end, elapsed))
 
 
 def fetch_sequential():
@@ -66,7 +66,7 @@ def run(attempts=1):
     reset()
     print("")
     print("======= Sequential Push (Just Once) =======")
-    print("Index\tStart        \tEnd          \tElapsed")
+    print("Index  Start         End           Elapsed")
     start = time.time()
     load_into_ipfs()
     elapsed = time.time() - start
@@ -76,7 +76,7 @@ def run(attempts=1):
         reset()
         print("")
         print("======= Sequential Fetch (Attempt #{}) =======".format(attempt))
-        print("Index\tStart        \tEnd          \tElapsed")
+        print("Index  Start         End           Elapsed")
         start = time.time()
         fetch_sequential()
         elapsed = time.time() - start
@@ -87,7 +87,7 @@ def run(attempts=1):
         reset()
         print("")
         print("======= Threaded Fetch (Attempt #{}) =======".format(attempt))
-        print("Index\tStart        \tEnd          \tElapsed")
+        print("Index  Start         End           Elapsed")
         start = time.time()
         fetch_threaded()
         elapsed = time.time() - start
@@ -96,10 +96,10 @@ def run(attempts=1):
 
     print("")
     print("======= SUMMARY =======")
-    print("Data Items:\t{}".format(len(data)))
-    print("Fetch Attempts:\t{}".format(attempts))
-    print("Mean Fetch Time (Sequential):\t{:.10f} seconds/item".format(sequential_time/attempts/len(data)))
-    print("Mean Fetch Time (Threaded):\t{:.10f} seconds/item".format(threaded_time/attempts/len(data)))
+    print("Data Items:      {}".format(len(data)))
+    print("Fetch Attempts:  {}".format(attempts))
+    print("Mean Fetch Time (Sequential):  {:.10f} seconds/item".format(sequential_time/attempts/len(data)))
+    print("Mean Fetch Time (Threaded):    {:.10f} seconds/item".format(threaded_time/attempts/len(data)))
 
 
 def print_help():
