@@ -71,26 +71,32 @@ def run(attempts=1):
     print("")
     print("======= Sequential Push (Just Once) =======")
     print("Index\tStart        \tEnd          \tElapsed")
+    start = time.time()
     load_into_ipfs()
-    print("Total {} items pushed to IPFS sequentially in {} seconds".format(len(data), sum(lapses)))
+    elapsed = time.time() - start
+    print("Total {} items pushed to IPFS sequentially in {} seconds".format(len(data), elapsed))
 
     for attempt in range(attempts):
         reset()
         print("")
         print("======= Sequential Fetch (Attempt #{}) =======".format(attempt))
         print("Index\tStart        \tEnd          \tElapsed")
+        start = time.time()
         fetch_sequential()
-        sequential_time += sum(lapses)
-        print("Total {} items fetched from IPFS sequentially in {} seconds".format(len(data), sum(lapses)))
+        elapsed = time.time() - start
+        sequential_time += elapsed
+        print("Total {} items fetched from IPFS sequentially in {} seconds".format(len(data), elapsed))
 
     for attempt in range(attempts):
         reset()
         print("")
         print("======= Threaded Fetch (Attempt #{}) =======".format(attempt))
         print("Index\tStart        \tEnd          \tElapsed")
+        start = time.time()
         fetch_threaded()
-        threaded_time += sum(lapses)
-        print("Total {} items fetched from IPFS concurrently in {} seconds".format(len(data), sum(lapses)))
+        elapsed = time.time() - start
+        threaded_time += elapsed
+        print("Total {} items fetched from IPFS concurrently in {} seconds".format(len(data), elapsed))
 
     print("")
     print("======= SUMMARY =======")
