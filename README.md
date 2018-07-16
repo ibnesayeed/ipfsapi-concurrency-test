@@ -68,38 +68,38 @@ $ docker container run --rm -it ipfsapitest:custom ./main.py 3 10
 $ ./main.py 3 2
 
 ======= Sequential Push (Just Once) =======
-Index	Start        	End          	Elapsed
-0	    0.0000419617	0.1857390404	0.1856970787
-1	    0.1857769489	0.3680591583	0.1822822094
-2	    0.3680939674	0.5546400547	0.1865460873
+Index  Start         End           Elapsed
+0      0.0000419617  0.1857390404  0.1856970787
+1      0.1857769489  0.3680591583  0.1822822094
+2      0.3680939674  0.5546400547  0.1865460873
 Total 3 items pushed to IPFS sequentially in 0.554525375366 seconds
 
 ======= Sequential Fetch (Attempt #0) =======
-Index	Start        	End          	Elapsed
-0	    0.0000739098	0.0046000481	0.0045261383
-1	    0.0046968460	0.0087950230	0.0040981770
-2	    0.0088398457	0.0128898621	0.0040500164
+Index  Start         End           Elapsed
+0      0.0000739098  0.0046000481  0.0045261383
+1      0.0046968460  0.0087950230  0.0040981770
+2      0.0088398457  0.0128898621  0.0040500164
 Total 3 items fetched from IPFS sequentially in 0.012674331665 seconds
 
 ======= Sequential Fetch (Attempt #1) =======
-Index	Start        	End          	Elapsed
-0	    0.0000650883	0.0043249130	0.0042598248
-1	    0.0043680668	0.0090460777	0.0046780109
-2	    0.0091040134	0.0146510601	0.0055470467
+Index  Start         End           Elapsed
+0      0.0000650883  0.0043249130  0.0042598248
+1      0.0043680668  0.0090460777  0.0046780109
+2      0.0091040134  0.0146510601  0.0055470467
 Total 3 items fetched from IPFS sequentially in 0.0144848823547 seconds
 
 ======= Threaded Fetch (Attempt #0) =======
-Index	Start        	End          	Elapsed
-2	    0.0045330524	0.0136179924	0.0090849400
-1	    0.0012850761	0.0140290260	0.0127439499
-0	    0.0005128384	0.0143189430	0.0138061047
+Index  Start         End           Elapsed
+2      0.0045330524  0.0136179924  0.0090849400
+1      0.0012850761  0.0140290260  0.0127439499
+0      0.0005128384  0.0143189430  0.0138061047
 Total 3 items fetched from IPFS concurrently in 0.0356349945068 seconds
 
 ======= Threaded Fetch (Attempt #1) =======
-Index	Start        	End          	Elapsed
-0	    0.0002660751	0.0062069893	0.0059409142
-1	    0.0014071465	0.0080530643	0.0066459179
-2	    0.0026381016	0.0082631111	0.0056250095
+Index  Start         End           Elapsed
+0      0.0002660751  0.0062069893  0.0059409142
+1      0.0014071465  0.0080530643  0.0066459179
+2      0.0026381016  0.0082631111  0.0056250095
 Total 3 items fetched from IPFS concurrently in 0.0182118415833 seconds
 
 ======= SUMMARY =======
