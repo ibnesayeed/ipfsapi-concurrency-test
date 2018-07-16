@@ -69,42 +69,42 @@ $ ./main.py 3 2
 
 ======= Sequential Push (Just Once) =======
 Index  Start         End           Elapsed
-0      0.0000419617  0.1857390404  0.1856970787
-1      0.1857769489  0.3680591583  0.1822822094
-2      0.3680939674  0.5546400547  0.1865460873
-Total 3 items pushed to IPFS sequentially in 0.554525375366 seconds
+0      0.0000340939  0.1755928993  0.1755588055
+1      0.1756749153  0.3476080894  0.1719331741
+2      0.3477320671  0.6154038906  0.2676718235
+Total 3 items pushed to IPFS sequentially in 0.615420103073 seconds
 
 ======= Sequential Fetch (Attempt #0) =======
 Index  Start         End           Elapsed
-0      0.0000739098  0.0046000481  0.0045261383
-1      0.0046968460  0.0087950230  0.0040981770
-2      0.0088398457  0.0128898621  0.0040500164
-Total 3 items fetched from IPFS sequentially in 0.012674331665 seconds
+0      0.0000329018  0.0025489330  0.0025160313
+1      0.0025768280  0.0053529739  0.0027761459
+2      0.0053858757  0.0131359100  0.0077500343
+Total 3 items fetched from IPFS sequentially in 0.0131340026855 seconds
 
 ======= Sequential Fetch (Attempt #1) =======
 Index  Start         End           Elapsed
-0      0.0000650883  0.0043249130  0.0042598248
-1      0.0043680668  0.0090460777  0.0046780109
-2      0.0091040134  0.0146510601  0.0055470467
-Total 3 items fetched from IPFS sequentially in 0.0144848823547 seconds
+0      0.0000140667  0.0036051273  0.0035910606
+1      0.0036320686  0.0061681271  0.0025360584
+2      0.0061969757  0.0097150803  0.0035181046
+Total 3 items fetched from IPFS sequentially in 0.00974893569946 seconds
 
 ======= Threaded Fetch (Attempt #0) =======
 Index  Start         End           Elapsed
-2      0.0045330524  0.0136179924  0.0090849400
-1      0.0012850761  0.0140290260  0.0127439499
-0      0.0005128384  0.0143189430  0.0138061047
-Total 3 items fetched from IPFS concurrently in 0.0356349945068 seconds
+0      0.0003600121  0.0075919628  0.0072319508
+1      0.0076868534  0.0114269257  0.0037400723
+2      0.0114920139  0.0147988796  0.0033068657
+Total 3 items fetched from IPFS concurrently in 0.014839887619 seconds
 
 ======= Threaded Fetch (Attempt #1) =======
 Index  Start         End           Elapsed
-0      0.0002660751  0.0062069893  0.0059409142
-1      0.0014071465  0.0080530643  0.0066459179
-2      0.0026381016  0.0082631111  0.0056250095
-Total 3 items fetched from IPFS concurrently in 0.0182118415833 seconds
+0      0.0002071857  0.0067441463  0.0065369606
+1      0.0024530888  0.0104010105  0.0079479218
+2      0.0030150414  0.0108411312  0.0078260899
+Total 3 items fetched from IPFS concurrently in 0.0109150409698 seconds
 
 ======= SUMMARY =======
-Data Items:     3
-Fetch Attempts: 2
-Mean Fetch Time (Sequential): 0.0045265357 seconds/item
-Mean Fetch Time (Threaded):   0.0089744727 seconds/item
+Data Items:      3
+Fetch Attempts:  2
+Mean Fetch Time (Sequential):  0.0038138231 seconds/item
+Mean Fetch Time (Threaded):    0.0042924881 seconds/item
 ```
