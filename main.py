@@ -83,7 +83,6 @@ def run(attempts=1):
         sequential_time += elapsed
         print("Total {} items fetched from IPFS sequentially in {} seconds".format(len(data), elapsed))
 
-    for attempt in range(attempts):
         reset()
         print("")
         print("======= Threaded Fetch (Attempt #{}) =======".format(attempt))
