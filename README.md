@@ -103,8 +103,8 @@ Index  Start         End           Elapsed
 Total 3 items fetched from IPFS concurrently in 0.0182118415833 seconds
 
 ======= SUMMARY =======
-Data Items:	    3
-Fetch Attempts:	2
-Mean Fetch Time (Sequential):	0.0045265357 seconds/item
-Mean Fetch Time (Threaded):	  0.0089744727 seconds/item
+Data Items:     3
+Fetch Attempts: 2
+Mean Fetch Time (Sequential): 0.0045265357 seconds/item
+Mean Fetch Time (Threaded):   0.0089744727 seconds/item
 ```
