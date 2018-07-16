@@ -20,14 +20,12 @@ BEGINTIME = time.time()
 
 digests = []
 results = []
-lapses = []
 
 
 def reset():
-    global BEGINTIME, results, lapses
+    global BEGINTIME, results
     BEGINTIME = time.time()
     results = [None] * len(data)
-    lapses = [0] * len(data)
 
 
 def load_into_ipfs():
@@ -36,7 +34,6 @@ def load_into_ipfs():
         digests.append(IPFSAPI.add_bytes(bytearray(data[idx], "utf-8")))
         end = time.time() - BEGINTIME
         elapsed = end - start
-        lapses[idx] += elapsed
         print("{}\t{:.10f}\t{:.10f}\t{:.10f}".format(idx, start, end, elapsed))
 
 
@@ -45,7 +42,6 @@ def load_from_ipfs(idx):
     results[idx] = IPFSAPI.cat(digests[idx])
     end = time.time() - BEGINTIME
     elapsed = end - start
-    lapses[idx] += elapsed
     print("{}\t{:.10f}\t{:.10f}\t{:.10f}".format(idx, start, end, elapsed))
 
 
